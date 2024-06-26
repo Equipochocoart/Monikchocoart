@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoArt</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('img/fondo_2.jpg');
+            /* Otros estilos para el cuerpo de la página */
+        }
+        /* Oculta todas las secciones */
+        .oculto{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ChocoArt</h1>
+        <!-- Barra de navegación -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="mostrarSeccion('quienes-somos')">Quienes somos</a></li>
+                <li><a href="#" onclick="mostrarSeccion('cliente')">Cliente</a></li>
+                <li><a href="#" onclick="mostrarSeccion('carrito')">Carrito</a></li>
+                <li><a href="#" onclick="mostrarSeccion('administrador')">Administrador</a></li>
+                <!-- Agrega más opciones de navegación si es necesario -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido de la página -->
+    <main>
+        <div id="contenedor-secciones">
+
+            <!-- Panel de Quienes Somos -->
+             <section id="quienes-somos">
+    <!-- Contenido del panel de quienes somos -->
+    <h2 style="color: blue; font-size: 24px;">Quiénes Somos</h2>
+    <p style="color: green;">¡Hola! Somos una familia dedicada a crear experiencias únicas, basados en chocolates 100% artesanales, para quienes sufren de diabetes o personas que quieren cuidar su salud.</p>
+    <img src="img/encabezado.png" alt="Corazones de amor" style="display: block; margin: 0 auto;">
+            </section>
+
+
+        <!--panel cliente-->
+        <section id="cliente" class="oculto">
+            <div class="producto">
+            <img src= "img/amor_corazon.jpg" alt="Corazones de amor">
+            <div class="descripcion-del-producto">
+                <h3 class=" Nombre-producto"> corazones de amor </h3>
+                <p class="precio-producto"> Precio: $3000</p>
+                </div>
+                <div class="Descripción-detallada"
+                <p>"Chocolates en forma de corazon de 15 centimetros, con relleno de frutas sin azucares añadidos.
+                    Escoge tu relleno favorito= fresa, mora,maracuya,uva,pera"</p>
+                <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+            </div>
+        </div>
+  
+    
+    
+             <div class="producto">
+            <img src= "img/animales_5.jpg" alt="animales de granja">
+            <div class="descripcion-del-producto">
+                <h3 class=" Nombre-producto"> animales de granja </h3>
+                <p class="precio-producto"> Precio: $3500</p>
+                </div>
+                <div class="Descripción-detallada"
+                <p>"Chocolates en forma de de animales, totalmente hechos de chocolate 100% natural, amargo"</p>
+                <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+            </div>
+            </div>
+    
+            <div class="producto">
+                <img src= "img/compu_13.jpg" alt="mi inge de chocolate">
+                <div class="descripcion-del-producto">
+                    <h3 class=" Nombre-producto"> mi inge de chocolate </h3>
+                    <p class="precio-producto"> Precio: $12500</p>
+                    </div>
+                    <div class="Descripción-detallada"
+                    <p>"Chocolates en forma de de materiales de uso diario de ingenieros y otras profesiones , totalmente hechos de chocolate 100% natural, amargo"</p>
+                    <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                </div>
+                </div>
+                <div class="producto">
+                    <img src= "img/contrufas_2.jpg" alt="Trufas de frutos secos">
+                    <div class="descripcion-del-producto">
+                        <h3 class=" Nombre-producto"> trufas de frutos secos </h3>
+                        <p class="precio-producto"> Precio: $12500</p>
+                        </div>
+                        <div class="Descripción-detallada"
+                        <p>"Trufas hechas con frutos secos, puedes seleccionar entre maní y almendras"</p>
+                        <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                    </div>
+                    </div>
+                    <div class="producto">
+                        <img src= "img/cumple_20.jpg" alt="mensaje de cumpleaños">
+                        <div class="descripcion-del-producto">
+                            <h3 class=" Nombre-producto"> mensaje de cumpleaños </h3>
+                            <p class="precio-producto"> Precio: $30000</p>
+                            </div>
+                            <div class="Descripción-detallada"
+                            <p>"mensaje de cumpleaños hecho en chocolate duro con relleno de frutos rojoss"</p>
+                            <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                        </div>
+                        </div>
+                        <div class="producto">
+                            <img src= "img/cumpleaños_29.jpg" alt="choco-pasteles">
+                            <div class="descripcion-del-producto">
+                                <h3 class=" Nombre-producto"> choco-pasteles </h3>
+                                <p class="precio-producto"> Precio: $20000</p>
+                                </div>
+                                <div class="Descripción-detallada"
+                                <p>"pastelitos a base de chocolate artesanal, con relleno de chocolate blanco"</p>
+                                <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                            </div>
+                            </div>
+                            <div class="producto">
+                                <img src= "img/elefante_1.jpg" alt="elefantitos">
+                                <div class="descripcion-del-producto">
+                                    <h3 class=" Nombre-producto"> elefantitos </h3>
+                                    <p class="precio-producto"> Precio: $5000</p>
+                                    </div>
+                                    <div class="Descripción-detallada"
+                                    <p>"elefantitos de chocolate negro amargo, y chocolate blanco endulzado con splenda"</p>
+                                    <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                </div>
+                                </div>
+                                <div class="producto">
+                                    <img src= "img/formas_3.jpg" alt="geometricos">
+                                    <div class="descripcion-del-producto">
+                                        <h3 class=" Nombre-producto"> geometricos </h3>
+                                        <p class="precio-producto"> Precio: $8000</p>
+                                        </div>
+                                        <div class="Descripción-detallada"
+                                        <p>"figuras geometricas caja de 12 unidades, totalmente amargos"</p>
+                                        <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                    </div>
+                                    </div>
+                                    <div class="producto">
+                                        <img src= "img/frutales_4.jpg" alt="Barras frutales">
+                                        <div class="descripcion-del-producto">
+                                            <h3 class=" Nombre-producto"> Barras frutales </h3>
+                                            <p class="precio-producto"> Precio: $8000</p>
+                                            </div>
+                                            <div class="Descripción-detallada"
+                                            <p>"Barras de chocolate negro o blanco, con trozos enteros de la fruta que desees"</p>
+                                            <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                        </div>
+                                        </div>
+                                        <div class="producto">
+                                            <img src= "img/grado_12.jpg" alt="mi grado">
+                                            <div class="descripcion-del-producto">
+                                                <h3 class=" Nombre-producto"> mi grado </h3>
+                                                <p class="precio-producto"> Precio: $8000</p>
+                                                </div>
+                                                <div class="Descripción-detallada"
+                                                <p>"12 bolas de manzanas envueltas en chocolate negro, con gorrito de grado"</p>
+                                                <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                            </div>
+                                            </div>
+                                            <div class="producto">
+                                                <img src= "img/mensaje_16.jpg" alt="aniversario">
+                                                <div class="descripcion-del-producto">
+                                                    <h3 class=" Nombre-producto"> aniversario </h3>
+                                                    <p class="precio-producto"> Precio: $33000</p>
+                                                    </div>
+                                                    <div class="Descripción-detallada"
+                                                    <p>"mensaje de aniversario personalizado, con relleno de frutos rojos "</p>
+                                                    <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                </div>
+                                                </div>
+                                                <div class="producto">
+                                                    <img src= "img/navidad_12.jpg" alt=" navidad chocolatosa">
+                                                    <div class="descripcion-del-producto">
+                                                        <h3 class=" Nombre-producto"> navidad chocolatosa </h3>
+                                                        <p class="precio-producto"> Precio: $20000</p>
+                                                        </div>
+                                                        <div class="Descripción-detallada"
+                                                        <p>"divertidas figuras navideñas hechas a base de chocolate oscuro, superficie de papel de arroz"</p>
+                                                        <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                    </div>
+                                                    </div>
+                                                    <div class="producto">
+                                                        <img src= "img/nombres_11.jpg" alt="choco-nombre">
+                                                        <div class="descripcion-del-producto">
+                                                            <h3 class=" Nombre-producto"> choco-nombre </h3>
+                                                            <p class="precio-producto"> Precio: $3000</p>
+                                                            </div>
+                                                            <div class="Descripción-detallada"
+                                                            <p>"letras 100% chocolate artesanal, superficie decorada con fondiu, precio por letra"</p>
+                                                            <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                        </div>
+                                                        </div>
+                                                        <div class="producto">
+                                                            <img src= "img/parejas_18.jpg" alt="somos un chocolate para el otro">
+                                                            <div class="descripcion-del-producto">
+                                                                <h3 class=" Nombre-producto"> somos un chocolate para el otro </h3>
+                                                                <p class="precio-producto"> Precio: $16000</p>
+                                                                </div>
+                                                                <div class="Descripción-detallada"
+                                                                <p>"pareja de novios de pelicula zombie, rellenos de frutas a tu eleccion: maracuya, mora, fresa,coco"</p>
+                                                                <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                            </div>
+                                                            </div>
+                                                            <div class="producto">
+                                                                <img src= "img/rosaschocol_10.jpg" alt="rosas de chocolate">
+                                                                <div class="descripcion-del-producto">
+                                                                    <h3 class=" Nombre-producto"> rosas de chocolate </h3>
+                                                                    <p class="precio-producto"> Precio: $18000</p>
+                                                                    </div>
+                                                                    <div class="Descripción-detallada"
+                                                                    <p>"doce flores de chocolate roseado de frutos rojos"</p>
+                                                                    <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                                </div>
+                                                                </div>
+                                                                <div class="producto">
+                                                                    <img src= "img/roses_6.jpg" alt="ramo de rosas">
+                                                                    <div class="descripcion-del-producto">
+                                                                        <h3 class=" Nombre-producto"> ramo de rosas </h3>
+                                                                        <p class="precio-producto"> Precio: $38000</p>
+                                                                        </div>
+                                                                        <div class="Descripción-detallada"
+                                                                        <p>"dramillete de 15 rosas de sabores variados, envueltos en papel de diseño"</p>
+                                                                        <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="producto">
+                                                                        <img src= "img/tacones_9.jpg" alt="¿quieres tacones?">
+                                                                        <div class="descripcion-del-producto">
+                                                                            <h3 class=" Nombre-producto"> ¿quieres tacones? </h3>
+                                                                            <p class="precio-producto"> Precio: $30000</p>
+                                                                            </div>
+                                                                            <div class="Descripción-detallada"
+                                                                            <p>"tacones de chocolate negro, blanco o mixto, con centro de frutos rojas"</p>
+                                                                            <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                                        </div>
+                                                                        </div>
+                                                                        <div class="producto">
+                                                                            <img src= "img/trufas_17.jpg" alt="trufas locas">
+                                                                            <div class="descripcion-del-producto">
+                                                                                <h3 class=" Nombre-producto"> trufas locas </h3>
+                                                                                <p class="precio-producto"> Precio: $20000</p>
+                                                                                </div>
+                                                                                <div class="Descripción-detallada"
+                                                                                <p>"trufas rellenas de centros divertidos srpresas"</p>
+                                                                                <button onclick="agregarAlCarrito(1)">Agregar al Carrito</button>
+                                                                            </div>
+                                                                          </div>
+                                                                        </section> 
+                                                                         
+<!-- Panel de Carrito -->
+<section id="carrito" class="oculto">
+    <!-- Contenido del panel de carrito -->
+    <h2>Carrito de Compras</h2>
+    <div id="productos-carrito">
+        <!-- Aquí se mostrarán los productos agregados al carrito -->
+    </div>
+</section>                                                                    
+    
+<section id="administrador" class="oculto">
+    <h2>Panel de Administración</h2>
+    <button id="btn-agregar-producto" onclick="mostrarFormularioAdministrador()">Agregar Nuevo Producto</button>
+    <div id="productos-administrador">
+        <!-- Aquí se mostrarán los productos del administrador -->
+        <!-- Ejemplo de producto -->
+        <!-- <div class="producto">
+            <img src="img/ejemplo.jpg" alt="Ejemplo">
+            <h3>Nombre del Producto</h3>
+            <p>Precio: $100.00</p>
+            <p>Descripción del producto.</p>
+            <button onclick="eliminarProducto(0)">Eliminar</button>
+        </div> -->
+        <a href="ver_inventario.php">Ver productos en inventario</a>    
+    </div>
+</section>
+
+</div>
+
+<!-- Modal para agregar nuevo producto -->
+<div id="formulario-producto" class="modal">
+<div class="modal-content">
+    <span class="close" onclick="cerrarFormulario()">&times;</span>
+    <h2>Agregar Nuevo Producto</h2>
+    <form action="agregar_producto.php" method="post" id="nuevo-producto-form">
+    <!--<form action="agregar_producto.php" method="post" onsubmit="agregarNuevoProducto(event)-->
+        <label for="nombre">Nombre del producto:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="imagen">Imagen del producto:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required><br><br>
+        <button type="submit" name="register">Agregar Producto</button>
+    </form>
+</div>
+</div>
+</main>
+
+<footer>
+<p>Empresa colombiana, ubicada en Bogotá, contacto: Monica@chocoart.co.com</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+    // Estructuras de datos para almacenar productos
+    let productosCliente = []; // Para productos visibles al cliente
+    let productosAdministrador = []; // Para productos administrativos
+
+    // Función para mostrar una sección y ocultar las demás
+    function mostrarSeccion(idSeccion) {
+        const secciones = document.querySelectorAll('#contenedor-secciones > section');
+        secciones.forEach(seccion => {
+            if (seccion.id === idSeccion) {
+                seccion.classList.remove('oculto');
+            } else {
+                seccion.classList.add('oculto');
+            }
+        });
+    }
+
+    // Función para mostrar el formulario de nuevo producto solo en administrador
+    function mostrarFormularioAdministrador() {
+        const modal = document.getElementById('formulario-producto');
+        modal.style.display = 'block'; // Mostrar el modal
+    }
+
+    // Función para cerrar el formulario de nuevo producto
+    function cerrarFormulario() {
+        const modal = document.getElementById('formulario-producto');
+        modal.style.display = 'none'; // Ocultar el modal
+    }
+
+    // Función para agregar un nuevo producto
+    function agregarNuevoProducto(event) {
+        event.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const imagen = document.getElementById('imagen').files[0];
+        const descripcion = document.getElementById('descripcion').value;
+        const precio = parseFloat(document.getElementById('precio').value);
+
+        const nuevoProducto = {
+            nombre: nombre,
+            imagen: URL.createObjectURL(imagen),
+            descripcion: descripcion,
+            precio: precio
+        };
+
+        // Agregar el producto al arreglo correspondiente
+        productosAdministrador.push(nuevoProducto);
+        // Mostrar los productos actualizados en el panel de administrador
+        mostrarProductosAdministrador();
+
+        // También agregar el producto al arreglo del cliente
+        productosCliente.push(nuevoProducto);
+        // Mostrar los productos actualizados en el panel del cliente
+        mostrarProductosCliente();
+
+        // Cerrar el formulario
+        cerrarFormulario();
+
+        // Limpiar el formulario
+        document.getElementById('nuevo-producto-form').reset();
+    }
+
+    // Función para mostrar los productos del administrador
+    function mostrarProductosAdministrador() {
+        const productosAdminSection = document.getElementById('productos-administrador');
+        productosAdminSection.innerHTML = '';
+
+        productosAdministrador.forEach((producto, index) => {
+            const productoHTML = `
+                <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <p>Precio: $${producto.precio.toFixed(2)}</p>
+                    <p>${producto.descripcion}</p>
+                    <button onclick="eliminarProducto('administrador', ${index})">Eliminar</button>
+                </div>
+            `;
+            productosAdminSection.innerHTML += productoHTML;
+        });
+    }
+
+    // Función para mostrar los productos del cliente
+    function mostrarProductosCliente() {
+        const productosClienteSection = document.getElementById('productos-cliente');
+        productosClienteSection.innerHTML = '';
+
+        productosCliente.forEach((producto, index) => {
+            const productoHTML = `
+                <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <p>Precio: $${producto.precio.toFixed(2)}</p>
+                    <p>${producto.descripcion}</p>
+                    <button onclick="agregarAlCarrito(${index})">Agregar al Carrito</button>
+                </div>
+            `;
+            productosClienteSection.innerHTML += productoHTML;
+        });
+    }
+
+    // Función para eliminar un producto del administrador o cliente
+    function eliminarProducto(tipo, index) {
+        if (tipo === 'administrador') {
+            productosAdministrador.splice(index, 1);
+            mostrarProductosAdministrador();
+        } else if (tipo === 'cliente') {
+            productosCliente.splice(index, 1);
+            mostrarProductosCliente();
+        }
+    }
+</script>
+
+</body>
+
+</html>
