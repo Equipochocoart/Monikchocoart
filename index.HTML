@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChocoArt</title>
@@ -259,8 +258,16 @@
     <div id="productos-carrito">
         <!-- Aquí se mostrarán los productos agregados al carrito -->
     </div>
-</section>                                                                    
-    
+</section>  
+<section id="login-form" class="form login"
+    <h5>Bienvenido,Administrador</h5>
+    <form id="loginForm" onsubmit="event.preventDefault(); validarLogin();">
+        <input class="controls" type="text" id="usuario" placeholder="Usuario">
+        <input class="controls" type="password" id="contraseña" placeholder="Contraseña">
+        <input class="buttons" type="submit" value="Ingresar">
+    </form>
+    <p><a href="#">¿Olvidó su contraseña?</a></p>
+</section> 
 <section id="administrador" class="oculto">
     <h2>Panel de Administración</h2>
     <button id="btn-agregar-producto" onclick="mostrarFormularioAdministrador()">Agregar Nuevo Producto</button>
@@ -404,17 +411,40 @@
             productosClienteSection.innerHTML += productoHTML;
         });
     }
+       // Función para validar el inicio de sesión
+    function validarLogin() {
+        const usuario = document.getElementById('usuario').value;
+        const contraseña = document.getElementById('contraseña').value;
 
-    // Función para eliminar un producto del administrador o cliente
-    function eliminarProducto(tipo, index) {
-        if (tipo === 'administrador') {
-            productosAdministrador.splice(index, 1);
-            mostrarProductosAdministrador();
-        } else if (tipo === 'cliente') {
-            productosCliente.splice(index, 1);
-            mostrarProductosCliente();
+        // Aquí debes realizar la autenticación (por ejemplo, mediante una solicitud fetch a un servidor)
+        // Por ahora, solo se simula el éxito para propósitos de demostración
+        if (usuario === 'monik' && contraseña === 'monik123') {
+            // Ocultar el formulario de login
+            document.getElementById('login-form').classList.add('oculto');
+
+            // Mostrar el panel de administración
+            mostrarSeccion('administrador');
+        } else {
+            alert('Usuario o contraseña incorrectos');
         }
     }
+
+    // Verificación de sesión
+    // Esta parte verifica la sesión al cargar la página (simulación)
+    // Debes implementar la lógica real para verificar la sesión en tu aplicación
+    // Este código es solo para demostración y puede no ser seguro en producción
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Verificar si ya hay una sesión activa
+        const isLoggedIn = sessionStorage.getItem('loggedIn'); // Aquí debes implementar la lógica real
+
+        if (isLoggedIn) {
+            // Si ya está autenticado, mostrar directamente la sección de administrador
+            mostrarSeccion('administrador');
+    } else {
+        // Si no hay sesión activa, mostrar el formulario de login
+        mostrarSeccion('login-form');
+    }
+});          
 </script>
 
 </body>

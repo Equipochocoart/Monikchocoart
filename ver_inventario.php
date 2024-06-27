@@ -30,4 +30,4 @@ include("config.php");
 ?>
     <a href="/chocoart/#">Administrador</a>
 </body>
-</html>
+</html

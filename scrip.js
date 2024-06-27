@@ -26,20 +26,18 @@ function mostrarProductosAdministrador() {
     productos.forEach(producto => {
         if (producto.tipo === 'administrador') {
             const productoHTML = `
-                <div class="producto">
-                    <h3>${producto.nombre}</h3>
-                    <p>Precio: $${producto.precio}</p>
-                    <button onclick="eliminarProducto(${producto.id})">Eliminar</button>
+            <div class="producto">
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <h3>${producto.nombre}</h3>
+                <p>Precio: $${producto.precio.toFixed(2)}</p>
+                <p>${producto.descripcion}</p>
+                button onclick="eliminarProducto(${producto.id})">Eliminar</button>
+                <button onclick="mostrarFormularioActualizacion(${index})">Actualizar</button>
                 </div>
             `;
             productosAdminSection.innerHTML += productoHTML;
         }
     });
-}
-
-function eliminarProducto(idProducto) {
-    productos = productos.filter(producto => producto.id !== idProducto);
-    mostrarProductosAdministrador();
 }
 
 function agregarNuevoProducto(event) {
@@ -94,3 +92,35 @@ window.onload = () => {
     mostrarProductosAdministrador();
     manejarModal();
 };
+document.addEventListener('DOMContentLoaded', (event) => {
+    if (document.getElementById('productos-administrador')) {
+        cargarProductosAdministrador();
+        manejarModal();
+    }
+});
+// Función para validar el login
+function validarLogin() {
+    const usuario = document.getElementById('usuario').value;
+    const contraseña = document.getElementById('contraseña').value;
+
+    // Validar usuario y contraseña
+    if (usuario === 'monik' && contraseña === 'monik123') {
+        // Ocultar el formulario de login
+        document.getElementById('login-form').classList.add('oculto');
+
+        // Mostrar el panel de administración
+        mostrarSeccion('administrador');
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
+}
+function mostrarSeccion(idSeccion) {
+    const secciones = document.querySelectorAll('#contenedor-secciones > section');
+    secciones.forEach(seccion => {
+        if (seccion.id === idSeccion) {
+            seccion.classList.remove('oculto');
+        } else {
+            seccion.classList.add('oculto');
+        }
+    });
+}

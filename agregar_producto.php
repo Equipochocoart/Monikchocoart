@@ -16,8 +16,8 @@ if (isset($_POST['register'])) {
         <?php
     } else {
     ?>
-        <H3>!algo fallo al guardar el query¡</H3>
+        <H3>!algo fallo al guardar el producto¡</H3>
         <?php
     }
     }
-?>
+    
