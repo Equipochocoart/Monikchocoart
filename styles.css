@@ -140,7 +140,28 @@ footer {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: rgb(45, 57, 137);
     text-decoration: none;
     cursor: pointer;
+}
+/* styles.css */
+.inventario-lista {
+    list-style-type: none;
+    padding: 0;
+}
+
+.inventario-lista li {
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+ /* Estilo cuando el enlace está en estado de hover (al pasar el ratón) */
+  /* Estilo cuando el enlace dentro de administrador está en estado de hover */
+  #administrador a:hover {
+    background-color: #793d94; /* Cambia el fondo a blanco */
+    color: #007bff; /* Cambia el color del texto a azul */
+}
+# chocoart/ver_inventario.php{
+    color: #793d94;
 }

@@ -281,8 +281,10 @@
             <p>Descripción del producto.</p>
             <button onclick="eliminarProducto(0)">Eliminar</button>
         </div> -->
-        <a href="ver_inventario.php">Ver productos en inventario</a>    
+        <button id="btn-eliminar-producto" onclick="mostrarFormularioEliminar()">Eliminar Producto</button>
+        <a href="ver_inventario.php">Ver productos en inventario</a>
     </div>
+    
 </section>
 
 </div>
@@ -306,6 +308,19 @@
     </form>
 </div>
 </div>
+
+<!-- Modal para eliminar producto -->
+<div id="eliminar-producto" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarFormulario()">&times;</span>
+        <h2>Eliminar Producto</h2>
+        <form action="eliminar_producto.php" method="post">
+                <label for="texto">Ingresa producto a eliminar:</label>
+                <input type="text" id="texto" name="texto" required>
+                <button type="submit">Enviar</button>
+        </form>
+    </div>
+    </div>
 </main>
 
 <footer>
@@ -339,6 +354,17 @@
     // Función para cerrar el formulario de nuevo producto
     function cerrarFormulario() {
         const modal = document.getElementById('formulario-producto');
+        modal.style.display = 'none'; // Ocultar el modal
+    }
+
+    // Función para mostrar el formulario de eliminar producto solo en administrador
+    function mostrarFormularioEliminar() {
+        const modal = document.getElementById('eliminar-producto');
+        modal.style.display = 'block'; // Mostrar el modal
+    }
+
+    function cerrarFormulario() {
+        const modal = document.getElementById('eliminar-producto');
         modal.style.display = 'none'; // Ocultar el modal
     }
 

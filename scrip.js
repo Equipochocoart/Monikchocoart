@@ -1,3 +1,4 @@
+
 let productos = []; // Arreglo para almacenar todos los productos
 
 function cargarProductosCliente() {
